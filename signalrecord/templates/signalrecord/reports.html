@@ -1,0 +1,29 @@
+{% extends 'signalrecord/base.html' %}
+
+{% block content %}
+<div class="table-card">
+    <h2>Alert Report</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th class="switch">Switch</th>
+                    <th class="alert-type">Alert Type</th>
+                    <th class="alert-datetime">Event Time</th>
+                    <th class="alert-notification-datetime">Email Time</th>
+                  </tr>
+            </thead>
+            <tbody>
+                {% for a in all_reports %}
+                <tr>
+                    <td>{{ a.switch }}</td>
+                    <td>{{ a.alert_type }}</td>
+                    <td>{{ a.alert_datetime }}</td>
+                    <td>{{ a.alert_notification_datetime }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+{% endblock %}

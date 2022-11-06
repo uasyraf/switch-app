@@ -1,0 +1,16 @@
+{% extends 'signalrecord/base.html' %}
+
+{% block content %}
+<section class="statechart-card">
+    <h2>Switch 1</h2>
+    {{ statechart_1|safe }}
+</section>
+<section class="statechart-card">
+    <h2>Switch 2</h2>
+    {{ statechart_2|safe }}
+</section>
+<section class="statechart-card">
+    <h2>Switch 3</h2>
+    {{ statechart_3|safe }}
+</section>
+{% endblock %}

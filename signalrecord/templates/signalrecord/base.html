@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Monitor</title>
+    <!-- MATERIAL CDN -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet">
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <!----------- ASIDE START ----------->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h1>SWI<span>TCH</span></h1>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="/cleandata">
+                    <h3>Clean Data</h3>
+                    <span class="material-icons-sharp">insights</span>
+                </a>
+                <a href="/rawdata">
+                    <h3>Raw Data</h3>
+                    <span class="material-icons-sharp">scatter_plot</span>
+                </a>
+                <a href="/reports">
+                    <h3>Reports</h3>
+                    <span class="material-icons-sharp">report_gmailerrorred</span>
+                </a>
+            </div>
+        </aside>
+        <!----------- ASIDE END ----------->
+        <div class="content">
+            <div class="page-title">
+                <h1>{{ page_title }}</h1>
+            </div>
+            <div class="page-content">
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

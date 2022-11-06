@@ -1,0 +1,10 @@
+DB_STAT_ID = 1
+PING_STATE_ZERO = 0
+PING_STATE_ONE = 1
+
+TYP_RAW = "RAW"
+TYP_PARSED = "PARSED"
+ALERT_TYP = "Ping lost"
+SW_1 = "S1"
+SW_2 = "S2"
+SW_3 = "S3"

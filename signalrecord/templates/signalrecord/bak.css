@@ -1,0 +1,73 @@
+.page-content .table-wrapper {
+    width: fit-content;
+    border-radius: var(--border-radius-2) var(--border-radius-2) 0 0;
+    overflow: hidden;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.page-content table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.page-content table tbody {
+    display: block;
+    height: 750px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.page-content table tbody tr {
+    height: 61px;
+    scroll-snap-align: end;
+}
+
+.page-content thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;/* even columns width , fix width of table too*/
+}
+
+.page-content thead {
+    overflow: hidden;
+    width: calc( 100% - 16px )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.page-content table thead tr {
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    height: 32px;
+}
+
+.page-content table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.page-content table tbody tr:last-of-type {
+    border-bottom: 2px solid black;
+}

@@ -1,0 +1,35 @@
+{% extends 'signalrecord/base.html' %}
+
+{% block content %}
+<div class="table-card">
+    <h2>Raw Data</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th class="switch">Switch</th>
+                    <th class="terminal">Terminal 1</th>
+                    <th class="terminal">Terminal 2</th>
+                    <th class="terminal">Terminal 3</th>
+                    <th class="terminal">Terminal 4</th>
+                    <th class="terminal">Terminal 5</th>
+                    <th class="datetime">Date & Time</th>
+                  </tr>
+            </thead>
+            <tbody>
+                {% for a in all_raw_data %}
+                <tr>
+                    <td>{{ a.switch }}</td>
+                    <td>{{ a.terminal_1 }}</td>
+                    <td>{{ a.terminal_2 }}</td>
+                    <td>{{ a.terminal_3 }}</td>
+                    <td>{{ a.terminal_4 }}</td>
+                    <td>{{ a.terminal_5 }}</td>
+                    <td>{{ a.date_n_time }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+</div>
+{% endblock %}
