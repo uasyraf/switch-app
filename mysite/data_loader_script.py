@@ -1,7 +1,7 @@
 import mariadb
 import csv
 import constant
-from datetime import datetime
+import os, environ
 
 class DataModel:
     def __init__(self):
@@ -114,13 +114,17 @@ def CSV_ToListOfModels(path_to_csv):
 
 
 
-def main():    
+def main():  
+    # Initialise environment variables
+    env = environ.Env()
+    environ.Env.read_env()
+
     try:
         connection = mariadb.connect(
-            user=constant.USER,
-            password=constant.PASSWORD,
-            host=constant.HOST,
-            database=constant.DATABASE,
+            user=env('DB_USER'),
+            password=env('DB_PASSWORD'),
+            host="localhost",
+            database=env('DB_NAME'),
         )
 
         cursor = connection.cursor()
