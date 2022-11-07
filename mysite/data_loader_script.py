@@ -138,7 +138,7 @@ def main():
             )
         connection.commit()
 
-    path_to_csv = "Data_Terminals.csv"
+    path_to_csv = ".\mysite\Data_Terminals.csv"
     data_models_ls = CSV_ToListOfModels(path_to_csv)
     
     # Insert db_status data for first time only
