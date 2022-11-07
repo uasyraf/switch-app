@@ -3,6 +3,8 @@ import csv
 import constant
 import os, environ
 
+from datetime import datetime
+
 class DataModel:
     def __init__(self):
         self._lable = None
@@ -121,10 +123,10 @@ def main():
 
     try:
         connection = mariadb.connect(
-            user=env('DB_USER'),
-            password=env('DB_PASSWORD'),
+            user="<your-user>",
+            password="<your-password>",
             host="localhost",
-            database=env('DB_NAME'),
+            database="your-database-name>",
         )
 
         cursor = connection.cursor()

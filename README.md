@@ -14,8 +14,15 @@ An app for a coding challenge
         DB_PASSWORD=<your-db-password>
 
 6. Create database by the name "codingchallengedb" on your local MariaDB
-7. Run "python ./mysite/data_loader_script.py"
-8. Run "python manage.py makemigrations"
-9. Run "python manage.py migrate"
+7. Run "python manage.py makemigrations"
+8. Run "python manage.py migrate"
+9. Modify these lines in **./mysite/data_loader_script.py --> main()** 
+
+        user="<your-user>",
+        password="<your-password>",
+        host="localhost",
+        database="your-database-name>",
+        
+9. Run "python ./mysite/data_loader_script.py"
 10. Run "python manage.py runserver"
 11. Enjoy.
